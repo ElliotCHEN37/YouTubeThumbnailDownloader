@@ -2,6 +2,7 @@
 YouTube Cover Downloader (YTCDL)
 
 Before proceeding, please ensure that you execute the following command:
+  
   $pip install requests
 
 Looking to download a cover of a YouTube video? My program can help! Follow these steps:
