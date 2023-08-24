@@ -1,18 +1,24 @@
 import webbrowser
 import requests
 import tkinter as tk
-from tkinter import messagebox
+from tkinter import filedialog, messagebox
 from PIL import Image, ImageTk
 
 def download_image():
     video_id = video_id_entry.get()
     if video_id:
         url = f'https://img.youtube.com/vi/{video_id}/maxresdefault.jpg'
-        file_name = 'maxresdefault.jpg'
         res = requests.get(url)
-        with open(file_name, 'wb') as f:
-            f.write(res.content)
-        messagebox.showinfo("Download Successful", "Image downloaded successfully!")
+        
+        # Open a file dialog to choose the download directory
+        file_path = filedialog.asksaveasfilename(defaultextension=".jpg", filetypes=[("JPEG files", "*.jpg")])
+        
+        if file_path:
+            with open(file_path, 'wb') as f:
+                f.write(res.content)
+            messagebox.showinfo("Download Successful", "Image downloaded successfully!")
+        else:
+            messagebox.showinfo("Download Cancelled", "Image download was cancelled.")
     else:
         messagebox.showwarning("Error", "Please enter a Video ID.")
 
@@ -20,7 +26,7 @@ def open_browser(event):
     webbrowser.open("https://github.com/ElliotCHEN37/YouTubeThumbnailDownloader")  # Replace with your desired URL
 
 root = tk.Tk()
-root.title("YouTube Thumbnail Downloader GUI v1.0")
+root.title("YouTube Thumbnail Downloader GUI v1.1")
 root.geometry("600x270")  # Set the initial window size
 root.resizable(False, False)  # Disable resizing
 
