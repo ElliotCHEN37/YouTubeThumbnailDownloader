@@ -8,3 +8,5 @@ Looking to download a cover of a YouTube video? My program can help! Follow thes
 3. Run the program and follow the instructions provided.
 
 That's it! With these simple steps, you can easily download the thumbnail of any YouTube video you like.
+
+Build with PyQt
