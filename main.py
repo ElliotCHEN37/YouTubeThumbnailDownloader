@@ -55,11 +55,11 @@ class YouTubeThumbnailDownloader(QMainWindow):
         about_menu.addAction(sponsor_action)
         
     def show_about_dialog(self):
-        about_text = "YouTube Thumbnail Downloader Version 1.3 (01/30/24) By ElliotCHEN\n\nA simple YouTube Thumbnail download program written in PyQt5\n\nhttps://github.com/ElliotCHEN37/YouTubeThumbnailDownloader\n\nThis work is licensed under MIT License"
+        about_text = "YouTube Thumbnail Downloader Version 1.3.1 (01/31/24) By ElliotCHEN\n\nA simple YouTube Thumbnail download program written in PyQt5\n\nhttps://github.com/ElliotCHEN37/YouTubeThumbnailDownloader\n\nThis work is licensed under MIT License"
         QMessageBox.about(self, "About", about_text)
 
     def show_changelog_dialog(self):
-        changelog_text = "v1.3 (01/30/24)\nBrand New Version!"
+        changelog_text = "v1.3.1 (01/30/24)\nNew\n-Add shortcut"
         QMessageBox.about(self, "Changelog", changelog_text)
 
     def show_sponsor_dialog(self):
@@ -91,6 +91,10 @@ class YouTubeThumbnailDownloader(QMainWindow):
         else:
             self.setWindowTitle("YouTube Thumbnail Downloader - Error")
             QMessageBox.warning(self, "Error", "Please enter a Video ID.")
+    
+    def keyPressEvent(self, event):
+        if event.key() == Qt.Key_Return or event.key() == Qt.Key_Enter:
+            self.download_image()
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
