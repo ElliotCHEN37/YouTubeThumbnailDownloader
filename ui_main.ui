@@ -176,9 +176,9 @@ QPushButton:pressed
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>400</x>
+      <x>370</x>
       <y>300</y>
-      <width>321</width>
+      <width>351</width>
       <height>41</height>
      </rect>
     </property>
@@ -188,7 +188,7 @@ QPushButton:pressed
      </font>
     </property>
     <property name="text">
-     <string>YouTube Thumbnail Downloader by ElliotCHEN37
+     <string>YouTube Thumbnail Downloader v2.0 by ElliotCHEN37
 This program was licensed under MIT License</string>
     </property>
     <property name="alignment">
