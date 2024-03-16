@@ -17,7 +17,7 @@
    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Paste your YouTube video link here, e.g. &lt;a href=&quot;https://www.youtube.com/watch?v=dQw4w9WgXcQ&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://www.youtube.com/watch?v=dQw4w9WgXcQ&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color:rgb(255, 255, 255)</string>
+   <string notr="true"/>
   </property>
   <property name="locale">
    <locale language="English" country="UnitedStates"/>
@@ -27,7 +27,7 @@
     <property name="geometry">
      <rect>
       <x>38</x>
-      <y>40</y>
+      <y>20</y>
       <width>350</width>
       <height>250</height>
      </rect>
@@ -52,7 +52,7 @@
     <property name="geometry">
      <rect>
       <x>440</x>
-      <y>60</y>
+      <y>40</y>
       <width>261</width>
       <height>201</height>
      </rect>
@@ -149,6 +149,7 @@ QLineEdit:hover
        <property name="styleSheet">
         <string notr="true">QPushButton
 {
+	background-color: rgb(255, 255, 255);
 	border:2px groove gray;
 	border-radius:5px;
 }
@@ -173,13 +174,35 @@ QPushButton:pressed
      </item>
     </layout>
    </widget>
-   <widget class="QLabel" name="label">
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>731</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="font">
+     <font>
+      <family>Arial</family>
+     </font>
+    </property>
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionPaste_YouTube_Video_Link"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuAbout">
     <property name="geometry">
      <rect>
-      <x>370</x>
-      <y>300</y>
-      <width>351</width>
-      <height>41</height>
+      <x>310</x>
+      <y>151</y>
+      <width>137</width>
+      <height>78</height>
      </rect>
     </property>
     <property name="font">
@@ -187,15 +210,44 @@ QPushButton:pressed
       <family>Arial</family>
      </font>
     </property>
-    <property name="text">
-     <string>YouTube Thumbnail Downloader v2.0 by ElliotCHEN37
-This program was licensed under MIT License</string>
+    <property name="title">
+     <string>Help</string>
     </property>
-    <property name="alignment">
-     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-    </property>
+    <addaction name="actionAbout"/>
    </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuAbout"/>
   </widget>
+  <action name="actionPaste_YouTube_Video_Link">
+   <property name="text">
+    <string>Paste and Download</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+    </font>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+    </font>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+    </font>
+   </property>
+  </action>
  </widget>
  <resources>
   <include location="resources.qrc"/>

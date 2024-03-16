@@ -1,3 +1,4 @@
 pytube
 requests
 pyqt5
+pyside2
