@@ -21,7 +21,7 @@ exe = EXE(
     a.binaries,
     a.datas,
     [],
-    name='YTTBDL.exe',
+    name='[Windows]YouTubeThumbnailDownloader_x64.exe',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
